@@ -1,0 +1,9 @@
+solman.pdf
+textbook.pdf
+build
+code/venv
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.gz

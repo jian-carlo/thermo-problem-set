@@ -3,8 +3,17 @@
 
 % USAGE: \units[value]{dimension}
 \usepackage{siunitx}
+\DeclareSIUnit\bar{bar}
 
 % USAGE: \begin{enumerate}[label=]
 % label can be \alph \roman etc
-% This gives off an annoying warning for some reason
-% \usepackage{enumitem}
+\usepackage{enumitem}
+
+%USAGE: the \ce{} command to type out chemical formulae
+\usepackage[version=4]{mhchem}
+
+%USAGE: to define solution environments to allow for nested folds
+\newenvironment{solution}
+  {\par\vspace{0.5em}\leftskip=0.5em \noindent\textbf{Solution:}\par\vspace{0.5em}}
+  {\par\vspace{0.5em}} % Optionally add space at the end
+%

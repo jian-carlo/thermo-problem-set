@@ -1,6 +1,6 @@
 solman.pdf
 textbook.pdf
-code/venv
+code/venv/*
 *.aux
 *.fdb_latexmk
 *.fls

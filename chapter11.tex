@@ -10,18 +10,18 @@ $1~\unit{\bar}$ and $25~\unit{\degreeCelsius}$ blend to form a gas
 mixture at the same conditions? Assume ideal gases.
 \begin{solution}
   \begin{gather*}
-
+    %
     \intertext{Label $\ch{CO2}$ and $\ch{N2}$ as (1) and (2) respectively}
     V_1 = 0.7~\unit{\meter\cubed} \qquad V_2 = 0.3~\unit{\meter\cubed}
-
+    %
     \intertext{For ideal gases it follows that:}
     x_1 = 0.7 \qquad x_2 = 0.3 \\
     P = 1~\unit{\bar} \qquad T = 298.15~\unit{\kelvin} \\
     n = \frac{P\sum_{i}^{~}V_i}{RT} \\
     n = 40.340~\unit{\mole} \\
     \Delta S = -nR\sum_{i}^{~}x_i\ln x_i \\
+    %
     \boxed{\Delta S = 204.885~\unit{\joule\per\kelvin}}
-
   \end{gather*}
 \end{solution}
 
@@ -35,20 +35,32 @@ what is the change in entropy? Assume nitrogen to be an ideal gas
 with $C_V=(5/2)R$ and argon to be an ideal gas with $C_V=(3/2)R$.
 \begin{solution}
   \begin{gather*}
-
+    %
     \intertext{Label \ch{N2} and \ch{Ar} as (1) and (2) respectively}
     n_1 = 4~\unit{\mole} \qquad n_2 = 2.5~\unit{\mole} \\
     t_1 = 75~\unit{\degreeCelsius} \qquad t_2 = 130~\unit{\degreeCelsius} \\
     P_1 = 30~\unit{\bar} \qquad P_2 = 20~\unit{\bar} \\
     C_{V,\,1} = (5/2)R \qquad C_{V,\,2} = (3/2)R
-
+    %
     \intertext{Find $T$ after mixing by energy balance:}
-    n_1 C_{V,\,1}(T-T_1) = n_2 C_{V,\,2} (T_2 - T)
-    T = 365.125~\unit{\kelvin}
-
+    n_1 C_{V,\,1}(T-T_1) = n_2 C_{V,\,2} (T_2 - T) \\
+    T = 363.15~\unit{\kelvin}
+    %
     \intertext{Find $P$ after mixing:}
     V = V_1 + V_2 \\
-    \frac{(n_1 + n_2)RT}{P} = \frac{n_1RT_1}{P_1} + \frac{n_2RT_2}{P_2}
+    \frac{(n_1 + n_2)RT}{P} = \frac{n_1RT_1}{P_1} + \frac{n_2RT_2}{P_2} \\
+    P = 24.38~\unit{\bar}
+    % tex-fmt: off
+    \intertext{Calculate the entropy change:}
+    \Delta S_i = n_i \left[C_{P,\,i} \ln\left(\frac{T}{T_i}\right) - R \ln\left(\frac{P}{P_i}\right) \right] \\
+    \Delta S_1 = \qquad \Delta S_2 = \\
+    % tex-fmt: on
+    \Delta S_\text{mix} = n\left[-R\sum_{i}^{~}x_i\ln x_i\right] \\
+    \Delta S_\text{mix} = \\
+    %
+    \Delta S = \Delta S_1 + \Delta S_2 + \Delta S_mix \\
+    \boxed{\Delta S = }
+    %
   \end{gather*}
 \end{solution}
 

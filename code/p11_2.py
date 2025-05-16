@@ -29,7 +29,7 @@ cv = np.array([
     2.5*R, 1.5*R
 ])
 
-cv = np.array([
+cp = np.array([
     3.5*R, 2.5*R
 ])
 
@@ -55,4 +55,9 @@ P_expr = (np.sum(n)*R_bar*T_value)/P - sum_term
 P_guess = (p[0] + p[1]) / 2
 P_value = nm(P_expr, P, P_guess) #bar
 
-
+ds = np.array([])
+for i_ in i:
+    j = i_ - 1
+    n_, cp_, t_, p_ = n[j], cp[j], t[j], p[j]
+    dsi = n_*(cp_*np.log(T_value/t_)-R*np.log(P_value/p_))
+    ds = np.append(ds, dsi)

@@ -21,6 +21,7 @@ p = np.array([
 i = 1, 2
 
 ntotal = np.sum(n)
+
 x = np.array([
     n[0]/ntotal, 1 - n[0]/ntotal
 ])
@@ -55,9 +56,15 @@ P_expr = (np.sum(n)*R_bar*T_value)/P - sum_term
 P_guess = (p[0] + p[1]) / 2
 P_value = nm(P_expr, P, P_guess) #bar
 
-ds = np.array([])
+ds = 0
+xlnx = 0
 for i_ in i:
     j = i_ - 1
-    n_, cp_, t_, p_ = n[j], cp[j], t[j], p[j]
-    dsi = n_*(cp_*np.log(T_value/t_)-R*np.log(P_value/p_))
-    ds = np.append(ds, dsi)
+    n_, cp_, t_, p_, x_ = n[j], cp[j], t[j], p[j], x[j]
+    ds += n_*(cp_*np.log(T_value/t_)-R*np.log(P_value/p_))
+    xlnx += x_*np.log(x_)
+
+dsmix = ntotal*(-1*R*xlnx)
+
+ANSWER = ds + dsmix
+print(f"Delta S = {ANSWER}")

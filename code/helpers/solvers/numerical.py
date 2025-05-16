@@ -1,35 +1,89 @@
-from sympy import Expr, Symbol, diff, lambdify
+import sympy as sp
 from typing import Union
 
-def newtons_method(function:Expr, variable:Symbol, guess: Union[float, int], tolerance=1e-7, max_iterations=1000) -> float:
+def newtons_method_debug(function:sp.Expr, variable:sp.Symbol, guess: Union[float, int], tolerance=1e-7, max_iterations=1000):
+    """
+    Newton's Method to numerically solve for the root of an algebraic function.
+    `newtons_method` is a version of this function without print statements.
+
+    Parameters:
+    function (Expr): The SymPy expression representing the function.
+    variable (Symbol): The independent variable of the function.
+    guess (float or int): Initial guess for the root.
+    tolerance (float, optional): The accuracy of the solution (default is 1e-7).
+    max_iterations (int, optional): Maximum number of iterations (default is 1000).
+
+    Returns:
+    float: The approximated root of the function.
+
+    Raises:
+    ValueError: If the derivative is near zero or if the method fails to converge.
+    """
+    x = variable
+
+    f = function
+    df = sp.diff(function)
+
+    f_ = sp.lambdify(x, f)
+    df_ = sp.lambdify(x, df)
+
+    xn = guess
+    for n in range(0, max_iterations):
+
+        fxn = f_(xn)
+
+        if abs(fxn) < tolerance:
+            print(f"Found solution after {n} iterations.")
+            print(f"root = {xn}")
+            return xn
+
+        dfxn = df_(xn)
+
+        if dfxn == 0:
+            print("Zerp derivative. No solution found.")
+            return None
+
+        xn = xn - fxn/dfxn
+    print("Exceeded maximum iterations. No solution found.")
+    return None 
+
+def newtons_method(function:sp.Expr, variable:sp.Symbol, guess: Union[float, int], tolerance=1e-7, max_iterations=1000):
     """
     Newton's Method to numerically solve for the root of an algebraic function.
 
     Parameters:
-    function (symbolic): The function whose root is to be found.
-    variable (symbol): The independent variable of the function.
-    guess (float/int): Initial guess for the root.
-    tolerance (float): The accuracy of the solution.
-    max_iter (int): Maximum number of iterations.
+    function (Expr): The SymPy expression representing the function.
+    variable (Symbol): The independent variable of the function.
+    guess (float or int): Initial guess for the root.
+    tolerance (float, optional): The accuracy of the solution (default is 1e-7).
+    max_iterations (int, optional): Maximum number of iterations (default is 1000).
+
+    Returns:
+    float: The approximated root of the function.
+
+    Raises:
+    ValueError: If the derivative is near zero or if the method fails to converge.
     """
     x = variable
+
     f = function
-    df = diff(f, x)
-    f_, df_ = lambdify(x, f), lambdify(x, df)
-    x_now = guess
-    for i in range(max_iterations):
-        fx = f_(x_now)
-        dfx = df_(x_now)
+    df = sp.diff(function)
 
-        if abs(dfx) < 1e-10: # Avoid division by zero
-            raise ValueError("Derivative near zero; Newton's method fails.")
-        
-        x_new = x_now - fx / dfx
+    f_ = sp.lambdify(x, f)
+    df_ = sp.lambdify(x, df)
 
-        print(f"Iteration {i}: x = {x_now}, f(x) = {fx}, f'(x) = {dfx}")
+    xn = guess
+    for n in range(0, max_iterations):
 
-        if abs(x_new - x_now) < tolerance:
-            return x_new
-        x_now = x_new
+        fxn = f_(xn)
 
-    raise ValueError("Newton's method did not converge within the maximum number of iterations")
+        if abs(fxn) < tolerance:
+            return xn
+
+        dfxn = df_(xn)
+
+        if dfxn == 0:
+            return None
+
+        xn = xn - fxn/dfxn
+    return None 

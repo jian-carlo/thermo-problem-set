@@ -10,8 +10,10 @@ $1~\unit{\bar}$ and $25~\unit{\degreeCelsius}$ blend to form a gas
 mixture at the same conditions? Assume ideal gases.
 \begin{solution}
   \begin{gather*}
+
     \intertext{Label $\ch{CO2}$ and $\ch{N2}$ as (1) and (2) respectively}
     V_1 = 0.7~\unit{\meter\cubed} \qquad V_2 = 0.3~\unit{\meter\cubed}
+
     \intertext{For ideal gases it follows that:}
     x_1 = 0.7 \qquad x_2 = 0.3 \\
     P = 1~\unit{\bar} \qquad T = 298.15~\unit{\kelvin} \\
@@ -19,6 +21,7 @@ mixture at the same conditions? Assume ideal gases.
     n = 40.340~\unit{\mole} \\
     \Delta S = -nR\sum_{i}^{~}x_i\ln x_i \\
     \boxed{\Delta S = 204.885~\unit{\joule\per\kelvin}}
+
   \end{gather*}
 \end{solution}
 
@@ -32,14 +35,20 @@ what is the change in entropy? Assume nitrogen to be an ideal gas
 with $C_V=(5/2)R$ and argon to be an ideal gas with $C_V=(3/2)R$.
 \begin{solution}
   \begin{gather*}
+
     \intertext{Label \ch{N2} and \ch{Ar} as (1) and (2) respectively}
     n_1 = 4~\unit{\mole} \qquad n_2 = 2.5~\unit{\mole} \\
     t_1 = 75~\unit{\degreeCelsius} \qquad t_2 = 130~\unit{\degreeCelsius} \\
     P_1 = 30~\unit{\bar} \qquad P_2 = 20~\unit{\bar} \\
     C_{V,\,1} = (5/2)R \qquad C_{V,\,2} = (3/2)R
+
     \intertext{Find $T$ after mixing by energy balance:}
     n_1 C_{V,\,1}(T-T_1) = n_2 C_{V,\,2} (T_2 - T)
-    T =
+    T = 365.125~\unit{\kelvin}
+
+    \intertext{Find $P$ after mixing:}
+    V = V_1 + V_2 \\
+    \frac{(n_1 + n_2)RT}{P} = \frac{n_1RT_1}{P_1} + \frac{n_2RT_2}{P_2}
   \end{gather*}
 \end{solution}
 

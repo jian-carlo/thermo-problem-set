@@ -1,0 +1,52 @@
+\documentclass{article}
+\usepackage{assets/problem-set}
+
+\begin{document}
+
+\section*{Problem 12.1}
+The following is a set of VLE data for the system
+methanol(1)/water(2) at 333.15 K
+(extracted from K. Kurihara et al., \textit{J. Chem. Eng. Data}, vol.
+40, pp. 679–684, 1995):
+
+\begin{table}[h!]
+  \centering
+  \begin{tabular}{ccc|ccc}
+    \toprule
+    \multicolumn{3}{c|}{$P/\text{kPa}$} & \multicolumn{3}{c}{$P/\text{kPa}$} \\
+    \cmidrule{1-3} \cmidrule{4-6}
+    $P$ & $x_1$ & $y_1$ & $P$ & $x_1$ & $y_1$ \\
+    \midrule
+    19.953 & 0.0000 & 0.0000 & 60.614 & 0.5282 & 0.8085 \\
+    39.223 & 0.1686 & 0.5714 & 63.998 & 0.6044 & 0.8383 \\
+    42.984 & 0.2167 & 0.6268 & 67.924 & 0.6804 & 0.8733 \\
+    48.882 & 0.3039 & 0.6983 & 70.229 & 0.7255 & 0.8922 \\
+    52.784 & 0.3681 & 0.7345 & 72.832 & 0.7776 & 0.9141 \\
+    56.652 & 0.4461 & 0.7742 & 84.562 & 1.0000 & 1.0000 \\
+    \bottomrule
+  \end{tabular}
+  \caption{VLE data for methanol(1)/water(2) at 333.15 K.}
+\end{table}
+
+\begin{enumerate}[label=(\alph*)]
+  \item Basing calculations on Eq. (12.1), find parameter values for
+    the Margules equation
+    that provide the best fit of \(G^E / RT\) to the data, and
+    prepare a \(P\)-\(x_1\) diagram
+    that compares the experimental points with curves determined from
+    the correlation.
+
+  \item Repeat (a) for the van Laar equation.
+
+  \item Repeat (a) for the Wilson equation.
+
+  \item Using Barker’s method, find parameter values for the Margules
+    equation that provide
+    the best fit of the \(P\)-\(x_1\) data. Prepare a diagram showing
+    the residuals \(\delta P\)
+    and \(\delta y_1\) plotted vs. \(x_1\).
+  \item Repeat (d) for the van Laar equation
+  \item Repeat (d) for the Wilson equation
+\end{enumerate}
+
+\end{document}

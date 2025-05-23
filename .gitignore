@@ -1,8 +1,3 @@
-solman.pdf
-textbook.pdf
+references/*
 code/venv/*
-*.aux
-*.fdb_latexmk
-*.fls
-*.log
-*.gz
+.aux/*

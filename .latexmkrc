@@ -1,1 +1,2 @@
-$out_dir = build
+$aux_dir = ".aux"
+$build_dir = "build"

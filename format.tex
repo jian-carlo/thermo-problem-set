@@ -13,7 +13,9 @@
 % --- Theorems, lemma, corollary, postulate, definition ---
 % \numberwithin{equation}{section}
 
-\newtcbtheorem[]{problem}{Problem}%
+\newcounter{chapter}
+
+\newtcbtheorem[number within=chapter]{problem}{Problem}%
 {enhanced,
   colback = black!5, %white,
   colbacktitle = black!5,
@@ -24,7 +26,9 @@
   fonttitle = \bfseries\sffamily,
   breakable,
   before skip = 3ex,
-  after skip = 3ex
+  after skip = 3ex,
+  attach title to upper,
+  toclabel={Problem~chapter.\thetcbcounter}
 }{problem}
 
 \tcbuselibrary{skins, breakable}

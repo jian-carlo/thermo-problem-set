@@ -1,0 +1,27 @@
+% tex-fmt: off
+
+% titlesec
+\titleformat{name=\section, numberless}
+  {}
+  {}
+  {0em}
+  {\phantomsection\addcontentsline{toc}{section}{#1}\Large\bfseries#1}
+
+\titleformat{name=\subsection, numberless}
+  {}
+  {}
+  {0em}
+  {\phantomsection\addcontentsline{toc}{subsection}{#1}\Large\bfseries#1}
+
+\newtcolorbox{solution}[1][]{
+  colback=gray!5,
+  colframe=gray!40,
+  coltitle=black,
+  fonttitle=\bfseries,
+  title=Solution,
+  boxrule=1pt,
+  rounded corners,
+  #1
+}
+
+% tex-fmt: on

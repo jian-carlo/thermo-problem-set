@@ -24,9 +24,10 @@ functions of the reaction coordinate for:
 \end{abcls}
 
 \begin{solution}
-  The solution here is to substitute into Eq.~(13.5)
+  The solution here is to substitute into Eq.~(\ref{eq:yeq})
   \begin{equation}
-    y_i = \frac{n_{io} + v_{i}\varepsilon}{n_0 + v\varepsilon}
+    \label{eq:yeq}
+    y_i = \frac{n_{io} + v_{i}\varepsilon}{n_0 + v\varepsilon} \tag{13.5}
   \end{equation}
   \begin{abcls}
   \item
@@ -134,3 +135,30 @@ reaction is unaffected by \(P\)) and for a feed of 1~\unit{\mole}
 \item Plot \(G\) vs. \(\varepsilon\), indicating the location of
   the equilibrium value of \(\varepsilon\) determined in (a).
 \end{abcls}
+
+\begin{solution}
+  \begin{enumerate}[label=(\alph*)]
+    \item
+      \begin{gather*}
+        y_{\ce{H2}} = y_{\ce{CO2}} = \frac{1 - \varepsilon}{2} \\
+        y_{\ce{H2O}} = y_{\ce{CO}} = \frac{\varepsilon}{2} \\
+        \intertext{From Eq.~(\ref{eq:13.4G})---the values of
+          \(\Delta G_{f_i}^\circ\) in \unit{\joule\per\mole} are given
+        in Example~13.13:}
+        \begin{split}
+          G = \left(\frac{1-\varepsilon}{2}\right)(-395790) +
+          \left(\frac{\varepsilon}{2}\right)(-200240 - 192420) + \\
+          R(1000)\left[2\left(\frac{1-\varepsilon}{2}\right)
+          \ln\left(\frac{1-\varepsilon}{2}\right)\right] +
+          \left[2\left(\frac{\varepsilon}{2}\right) \ln
+          \left(\frac{\varepsilon}{2}\right)\right]
+        \end{split}
+        \intertext{Differentiate with respect to \(\varepsilon\) and
+        equate to zero as in Eq.~(\ref{eq:13.4dG}):}
+        \begin{split}
+          \frac{dG}{d\varepsilon} = 0 = - \frac{1}{2}(-395790) +
+          \frac{1}{2}(-200240 - 192420) + \\
+        \end{split}
+      \end{gather*}
+  \end{enumerate}
+\end{solution}

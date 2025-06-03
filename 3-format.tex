@@ -13,6 +13,7 @@
   {0em}
   {\phantomsection\addcontentsline{toc}{subsection}{#1}\Large\bfseries#1}
 
+\tcbuselibrary{breakable}
 \newtcolorbox{solution}[1][]{
   colback=gray!5,
   colframe=gray!40,
@@ -21,7 +22,8 @@
   title=Solution,
   boxrule=1pt,
   rounded corners,
-  #1
+  #1,
+  breakable
 }
 
 % tex-fmt: on

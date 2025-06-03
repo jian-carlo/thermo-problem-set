@@ -181,9 +181,9 @@ Rework Pb. 13.4 for a temperature of:
   Refer to Pb. 13.4 for the solution.
   The plots of (a), (b), and (c) are shown in Figure~\ref{fig:13.5}
   \begin{enumerate}[label=(\alph*)]
-    \item \(\boxed{\varepsilon=0.456\)}
-    \item \(\boxed{\varepsilon=0.460\)}
-    \item \(\boxed{\varepsilon=0.463\)}
+    \item \(\boxed{\varepsilon=0.456}\)
+    \item \(\boxed{\varepsilon=0.460}\)
+    \item \(\boxed{\varepsilon=0.463}\)
   \end{enumerate}
 \end{solution}
 
@@ -194,3 +194,126 @@ Rework Pb. 13.4 for a temperature of:
   systems described in 13.5}
   \label{fig:13.5}
 \end{figure}
+
+\subsection*{Problem 13.6}
+Use the method of equilibrium constants to verify the value of \(\varepsilon\)
+found as an answer in one of the following:
+\begin{enumerate}[label=(\alph*)]
+  \item Pb. 13.4;
+  \item Pb. 13.5(a);
+  \item Pb. 13.5(b);
+  \item Pb. 13.5(c).
+\end{enumerate}
+
+\begin{solution}
+  \begin{gather*}
+    \ce{CO(g) + H2(g) -> H2O(g) + CO(g)} \\
+    y_{\ce{H2}} = y_{\ce{CO2}} = \frac{1-\varepsilon}{2} \\
+    y_{\ce{CO2}} = y_{\ce{H2O}} = \frac{\varepsilon}{2} \\
+    K = \frac{y_{\ce{H2O}}y_{\ce{CO}}}{y_{\ce{H2}}y_{\ce{CO}}} =
+    \left(\frac{\varepsilon}{1 -  \varepsilon}\right)^2 \\
+    K = \exp \left( \frac{-\Delta G}{RT} \right) \\
+    \varepsilon = \frac{\sqrt{K}}{1 + \sqrt{K}}
+  \end{gather*}
+  \begin{empheq}[box=\widefbox]{gather*}
+    \varepsilon =
+    \begin{bmatrix}
+      0.4531 \\
+      0.5021 \\
+      0.5399 \\
+      0.5709
+    \end{bmatrix}
+  \end{empheq}
+\end{solution}
+
+\subsection*{Problem 13.7}
+Develop a general equation for the standard Gibbs-energy change of
+reaction $\Delta G^\circ$ as a function of temperature for one of the
+reactions given in parts (a), (f), (i), (n), (r), (t), (u), (x), and
+(y) of Pb. 4.21.
+
+\begin{solution}
+  Write \(\Delta G_r^\circ\) in terms of \(K\) and \(T\):
+  \begin{gather*}
+    K = e^{-\Delta G_r^\circ/(RT)} \\
+    \Delta G_r^\circ = RT\ln\left(\frac{1}{K}\right)
+  \end{gather*}
+  \begin{enumerate}
+    \item[(a)]
+      \begin{gather*}
+        \ce{N2(g) + 3H2(g) -> 2NH3(g)} \\
+        \boxed{\Delta G_r^\circ =
+        RT\ln\left(\frac{y_{\ce{N2}}y_{\ce{H2}}^2}{y_{\ce{NH3}}^2}\right)}
+      \end{gather*}
+    \item[(f)]
+      \begin{gather*}
+        \ce{6NO2(g) + 8NH3(g) ->  7N2(g) +12H2O(g)} \\
+        \boxed{\Delta G_r^\circ =
+        RT\ln\left(\frac{y_{\ce{NO2}}^6y_{\ce{NH3}}^8}{y_{\ce{N2}}^7y_{\ce{H2O}}^12}\right)}
+      \end{gather*}
+    \item[(i)]
+      \begin{gather*}
+        \ce{CH4(g) + 2H2O(g) -> CO2(g) + 4H2(g)} \\
+        \boxed{\Delta G_r^\circ =
+        RT\ln\left(\frac{y_{\ce{CH4}}y_{\ce{H2O}}^2}{y_{\ce{CO2}}y_{\ce{H2}}^4}\right)}
+      \end{gather*}
+    \item[(n)]
+      \begin{gather*}
+        \ce{N2(g) + O2(g) -> 2NO(g)} \\
+        \boxed{\Delta G_r^\circ =
+        RT\ln\left(\frac{y_{\ce{N2}}y_{\ce{O2}}}{y_{\ce{NO}}^2}\right)}
+      \end{gather*}
+    \item[(r)]
+      \begin{gather*}
+        \ce{CH3CHO(g) + H2(g) -> C2H5OH(g)} \\
+        \boxed{\Delta G_r^\circ =
+        RT\ln\left(\frac{y_{\ce{CH3CHO}}y_{\ce{H2}}}{y_{\ce{C2H5OH}}}\right)}
+      \end{gather*}
+    \item[(t)]
+      \begin{gather*}
+        \ce{C2H5CH=CH2(g) + \frac{1}{2}O2(g) -> CH2=CHCH=CH2(g) + H2O(g)} \\
+        \boxed{\Delta G_r^\circ =
+        RT\ln\left(\frac{y_{\ce{C2H5CH=CH2}}y_{\ce{O2}}^{1/2}}{y_{\ce{CH2=CHCH=CH2}}y_{\ce{H2O}}}\right)}
+      \end{gather*}
+    \item[(u)]
+      \begin{gather*}
+        \ce{C4H10(g) -> CH2=CHCH=CH2(g) + 2H2(g)} \\
+        \boxed{\Delta G_r^\circ =
+        RT\ln\left(\frac{y_{\ce{C4H10}}}{y_{\ce{CH2=CHCH=CH2}}y_{\ce{H2}}^2}\right)}
+      \end{gather*}
+    \item[(x)]
+      \begin{gather*}
+        \ce{N2(g) + C2H2(g) -> 2HCN(g)} \\
+        \boxed{\Delta G_r^\circ =
+        RT\ln\left(\frac{y_{\ce{N2}}y_{\ce{C2H2}}}{y_{\ce{HCN}}^2}\right)}
+      \end{gather*}
+    \item[(y)]
+      \begin{gather*}
+        \ce{C6H5\cdot C2H5(g) -> C6H5CH=CH2(g) + H2(g)} \\
+        \boxed{\Delta G_r^\circ =
+          RT\ln\left(\frac{y_{\ce{C6H5\cdot
+        C2H5}}}{y_{\ce{C6H5CH=CH2}}y_{\ce{H2}}}\right)}
+      \end{gather*}
+  \end{enumerate}
+\end{solution}
+
+\subsection*{Problem 13.8}
+For ideal gases, exact mathematical expressions can be developed for
+the effect of $T$ and $P$ on $\varepsilon_e$. For conciseness, let
+$\prod (y_i)^{\nu_i} = K_y$. Then:
+$$
+\left(\frac{\partial \varepsilon_e}{\partial T}\right)_P =
+\left(\frac{\partial K_y}{\partial T}\right)_P
+\frac{d\varepsilon_e}{dK_y} \quad \text{and} \quad
+\left(\frac{\partial \varepsilon_e}{\partial P}\right)_T =
+\left(\frac{\partial K_y}{\partial P}\right)_T \frac{d\varepsilon_e}{dK_y}
+$$
+Use Eqs. (13.28) and (13.14), to show that:
+\begin{enumerate}[label=(\alph*)]
+  \item \(\displaystyle \left(\frac{\partial \varepsilon_e}{\partial
+    T}\right)_P = \frac{K_y}{RT^2} \frac{d\varepsilon_e}{dK_y} \Delta H^\circ\)
+  \item \(\displaystyle \left(\frac{\partial \varepsilon_e}{\partial
+    P}\right)_T = -\frac{K_y}{P} \frac{d\varepsilon_e}{dK_y} (\bar{\nu})\)
+  \item (c) $d\varepsilon_e / dK_y$ is always positive. (Note: It is
+    equally valid and perhaps easier to show that the reciprocal is positive.)
+\end{enumerate}

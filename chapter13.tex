@@ -301,19 +301,34 @@ reactions given in parts (a), (f), (i), (n), (r), (t), (u), (x), and
 For ideal gases, exact mathematical expressions can be developed for
 the effect of $T$ and $P$ on $\varepsilon_e$. For conciseness, let
 $\prod (y_i)^{\nu_i} = K_y$. Then:
-$$
-\left(\frac{\partial \varepsilon_e}{\partial T}\right)_P =
-\left(\frac{\partial K_y}{\partial T}\right)_P
-\frac{d\varepsilon_e}{dK_y} \quad \text{and} \quad
-\left(\frac{\partial \varepsilon_e}{\partial P}\right)_T =
-\left(\frac{\partial K_y}{\partial P}\right)_T \frac{d\varepsilon_e}{dK_y}
-$$
+\begin{equation*}
+  \left(\frac{\partial \varepsilon_e}{\partial T}\right)_P =
+  \left(\frac{\partial K_y}{\partial T}\right)_P
+  \frac{d\varepsilon_e}{dK_y} \quad \text{and} \quad
+  \left(\frac{\partial \varepsilon_e}{\partial P}\right)_T =
+  \left(\frac{\partial K_y}{\partial P}\right)_T \frac{d\varepsilon_e}{dK_y}
+\end{equation*}
+
 Use Eqs. (13.28) and (13.14), to show that:
 \begin{enumerate}[label=(\alph*)]
   \item \(\displaystyle \left(\frac{\partial \varepsilon_e}{\partial
     T}\right)_P = \frac{K_y}{RT^2} \frac{d\varepsilon_e}{dK_y} \Delta H^\circ\)
   \item \(\displaystyle \left(\frac{\partial \varepsilon_e}{\partial
     P}\right)_T = -\frac{K_y}{P} \frac{d\varepsilon_e}{dK_y} (\bar{\nu})\)
-  \item (c) $d\varepsilon_e / dK_y$ is always positive. (Note: It is
+  \item $d\varepsilon_e / dK_y$ is always positive. (Note: It is
     equally valid and perhaps easier to show that the reciprocal is positive.)
 \end{enumerate}
+
+\begin{solution}
+  \begin{enumerate}[label=(\alph*)]
+    \item
+      \begin{gather*}
+        \left(\frac{\partial \varepsilon_e}{\partial T}\right)_{P} =
+        \left(\frac{\partial K_y}{\partial T}\right)_{P}
+        \frac{d\varepsilon_e}{K_y}
+      \end{gather*}
+      \begin{equation}
+        \prod_i (y_i)^{v_i} = \left(\frac{P}{P^\circ}\right)^{-v}K \tag{13.28}
+      \end{equation}
+  \end{enumerate}
+\end{solution}

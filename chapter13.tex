@@ -297,38 +297,79 @@ reactions given in parts (a), (f), (i), (n), (r), (t), (u), (x), and
   \end{enumerate}
 \end{solution}
 
-\subsection*{Problem 13.8}
-For ideal gases, exact mathematical expressions can be developed for
-the effect of $T$ and $P$ on $\varepsilon_e$. For conciseness, let
-$\prod (y_i)^{\nu_i} = K_y$. Then:
-\begin{equation*}
-  \left(\frac{\partial \varepsilon_e}{\partial T}\right)_P =
-  \left(\frac{\partial K_y}{\partial T}\right)_P
-  \frac{d\varepsilon_e}{dK_y} \quad \text{and} \quad
-  \left(\frac{\partial \varepsilon_e}{\partial P}\right)_T =
-  \left(\frac{\partial K_y}{\partial P}\right)_T \frac{d\varepsilon_e}{dK_y}
-\end{equation*}
+% \subsection*{Problem 13.8}
+% For ideal gases, exact mathematical expressions can be developed for
+% the effect of $T$ and $P$ on $\varepsilon_e$. For conciseness, let
+% $\prod (y_i)^{\nu_i} = K_y$. Then:
+% \begin{equation*}
+%   \left(\frac{\partial \varepsilon_e}{\partial T}\right)_P =
+%   \left(\frac{\partial K_y}{\partial T}\right)_P
+%   \frac{d\varepsilon_e}{dK_y} \quad \text{and} \quad
+%   \left(\frac{\partial \varepsilon_e}{\partial P}\right)_T =
+%   \left(\frac{\partial K_y}{\partial P}\right)_T \frac{d\varepsilon_e}{dK_y}
+% \end{equation*}
+%
+% Use Eqs. (13.28) and (13.14), to show that:
+% \begin{enumerate}[label=(\alph*)]
+%   \item \(\displaystyle \left(\frac{\partial \varepsilon_e}{\partial
+%     T}\right)_P = \frac{K_y}{RT^2} \frac{d\varepsilon_e}{dK_y}
+% \Delta H^\circ\)
+%   \item \(\displaystyle \left(\frac{\partial \varepsilon_e}{\partial
+%     P}\right)_T = -\frac{K_y}{P} \frac{d\varepsilon_e}{dK_y} (\bar{\nu})\)
+%   \item $d\varepsilon_e / dK_y$ is always positive. (Note: It is
+%     equally valid and perhaps easier to show that the reciprocal is positive.)
+% \end{enumerate}
 
-Use Eqs. (13.28) and (13.14), to show that:
-\begin{enumerate}[label=(\alph*)]
-  \item \(\displaystyle \left(\frac{\partial \varepsilon_e}{\partial
-    T}\right)_P = \frac{K_y}{RT^2} \frac{d\varepsilon_e}{dK_y} \Delta H^\circ\)
-  \item \(\displaystyle \left(\frac{\partial \varepsilon_e}{\partial
-    P}\right)_T = -\frac{K_y}{P} \frac{d\varepsilon_e}{dK_y} (\bar{\nu})\)
-  \item $d\varepsilon_e / dK_y$ is always positive. (Note: It is
-    equally valid and perhaps easier to show that the reciprocal is positive.)
-\end{enumerate}
+% \subsection*{Problem 13.9}
+% For the ammonia synthesis reaction written:
+% \begin{equation*}
+%   \ce{\frac{1}{2}N2(g) + \frac{3}{2}H2(g) -> NH3(g)}
+% \end{equation*}
+% with 0.5~\unit{\mole} \(\ce{N2}\) and 1.5~\unit{\mole} \(\ce{H2}\) as
+% the initial amounts of reactants and with the assumption that the
+% equilibrium mixture is an ideal gas, show that:
+% \begin{equation*}
+%   \varepsilon_e = 1 - (1 + 1.299~\unit{\kelvin} \frac{P}{P^\circ})^{-1/2}
+% \end{equation*}
+
+% \subsection*{Problem 13.10}
+% Peter, Paul, and Mary, members of a thermodynamic class, are asked to
+% find the equilibrium composition at a particular \(T\) and \(P\) and
+% for given initial amounts of reactants for the following gas-phase reaction:
+% \begin{equation*}
+%   \ce{2NH3 + 3NO -> 3H2O + \frac{5}{2}N2} \tag{A}
+%   \label{eq:13.10A}
+% \end{equation*}
+% Each solves the problem correctly in a different way. Mary bases her
+% solution on reaction \ref{eq:13.10A} as written. Paul, who prefers
+% whole numbers, multiplies reaction \ref{eq:13.10A} by 2:
+% \begin{equation*}
+%   \ce{4NH3 + 6NO -> 6H2O + 5N2} \tag{B}
+%   \label{eq:13.10B}
+% \end{equation*}
+% Peter, who usually does things backward, deals with the reaction:
+% \begin{equation*}
+%   \ce{3H2O + \frac{5}{2}N2 -> 2NH3 + 3NO} \tag{C}
+%   \label{eq:13.10C}
+% \end{equation*}
+% Write the chemical-equilibrium equations for the three reactions,
+% indicate how the equilibrium constants are related, and show why
+% Peter, Paul, and Mary all obtain the same result.
+
+\subsection*{Problem 13.11}
+The following reaction reaches equilibrium at
+500~\unit{\degreeCelsius} and 2~\unit{\bar}:
+\begin{equation*}
+  \ce{4HCl(g) + O2(g) -> 2H2O(g) + 2Cl2(g)}
+\end{equation*}
+If the system initially contains 5~\unit{\mole} \(\ce{HCl}\) for each
+mole of oxygen, what is the composition of the system in equilibrium?
+Assume ideal gases.
 
 \begin{solution}
-  \begin{enumerate}[label=(\alph*)]
-    \item
-      \begin{gather*}
-        \left(\frac{\partial \varepsilon_e}{\partial T}\right)_{P} =
-        \left(\frac{\partial K_y}{\partial T}\right)_{P}
-        \frac{d\varepsilon_e}{K_y}
-      \end{gather*}
-      \begin{equation}
-        \prod_i (y_i)^{v_i} = \left(\frac{P}{P^\circ}\right)^{-v}K \tag{13.28}
-      \end{equation}
-  \end{enumerate}
+  \begin{gather*}
+    n_{\ce{HCl}} = 5~\unit{\mole} \qquad n_{\ce{O2}} = 1~\unit{\mole} \\
+    n_0 = 6~\unit{\mole}
+    T = 773.15~\unit{\kelvin} \qquad T_0 = 298.15~\unit{\kelvin}
+  \end{gather*}
 \end{solution}

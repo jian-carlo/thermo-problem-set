@@ -370,7 +370,7 @@ Assume ideal gases.
   \begin{gather*}
     n_{\ce{HCl}} = 5~\unit{\mole} \qquad n_{\ce{O2}} = 1~\unit{\mole} \qquad
     n_0 = 6~\unit{\mole} \\
-    T = 773.15~\unit{\kelvin} \qquad T_0 = 298.15~\unit{\kelvin} \\
+    T = 773.15~\unit{\kelvin} \qquad T_0 = 298.15~\unit{\kelvin}
   \end{gather*}
   We must first determine \(K\) thus we use Eq~(\ref{eq:13.18}):
   \begin{equation*}
@@ -397,7 +397,7 @@ Assume ideal gases.
   \end{equation*}
   Substituting to Eq~(\ref{eq:13.18}):
   \begin{gather*}
-    \Delta G^\circ = -12671.71
+    \Delta G^\circ = -12671.71~\unit{\joule\per\mole}
     \intertext{Solve for \(K\):}
     K = e^{(-\Delta G/RT)} = 7.1795
   \end{gather*}
@@ -408,10 +408,21 @@ Assume ideal gases.
     y_{\ce{H2O}} = \frac{2\varepsilon}{6 - \varepsilon} \\
     y_{\ce{Cl2}} = \frac{2\varepsilon}{6 - \varepsilon}
   \end{gather*}
-  Apply Eq.~(\ref{eq:13.28}:
-    \begin{equation}
-      \label{eq:13.28}
-      \tag{13.28}
-      \prod_i (y_i)^{v_i} = \left(\frac{P}{P^\circ}\right)^{-v} K
-    \end{equation}
-  \end{solution}
+  Apply Eq.~(\ref{eq:13.28}):
+  \begin{equation}
+    \label{eq:13.28}
+    \tag{13.28}
+    \prod_i (y_i)^{v_i} = \left(\frac{P}{P^\circ}\right)^{-v} K
+  \end{equation}
+  \begin{gather*}
+    \left(\frac{2\varepsilon}{5 - 4\varepsilon}\right)^4
+    \left(\frac{6-\varepsilon}{1-\varepsilon}\right) = 2K \\
+    \varepsilon = 0.7934
+  \end{gather*}
+  \begin{empheq}[box=\widefbox]{gather*}
+    y_{\ce{HCl}} = 0.3508 \\
+    y_{\ce{O2}} = 0.0397 \\
+    y_{\ce{H2O}} = 0.3048 \\
+    y_{\ce{Cl2}} = 0.3048
+  \end{empheq}
+\end{solution}

@@ -370,6 +370,48 @@ Assume ideal gases.
   \begin{gather*}
     n_{\ce{HCl}} = 5~\unit{\mole} \qquad n_{\ce{O2}} = 1~\unit{\mole} \qquad
     n_0 = 6~\unit{\mole} \\
-    T = 773.15~\unit{\kelvin} \qquad T_0 = 298.15~\unit{\kelvin}
+    T = 773.15~\unit{\kelvin} \qquad T_0 = 298.15~\unit{\kelvin} \\
   \end{gather*}
-\end{solution}
+  We must first determine \(K\) thus we use Eq~(\ref{eq:13.18}):
+  \begin{equation*}
+    \label{eq:13.18}
+    \tag{13.18}
+    \frac{\Delta G^\circ}{RT} = \frac{\Delta G_0^\circ - \Delta
+    H_0^\circ}{RT_0} + \frac{\Delta H_0^\circ}{RT} + \frac{1}{T}
+    \int_{T_0}^{T} \frac{\Delta C_P^\circ}{R} \, dT - \int_{T_0}^{T}
+    \frac{\Delta C_P^\circ}{R} \, \frac{dT}{T}
+  \end{equation*}
+  Determine \(\Delta G_0^\circ\) and \(\Delta H_0^\circ\) from the
+  values of the enthalpies and gibbs energies of formation of the
+  species involved:
+  \begin{gather*}
+    \Delta H_0^\circ = -75948~\unit{\joule\per\mole} \\
+    \Delta G_0^\circ = -114408~\unit{\joule\per\mole}
+  \end{gather*}
+  Next we determine the \(\Delta A\), \(\Delta B\), \(\Delta C\),
+  \(\Delta D\) of the reaction using the Antoine constants of the
+  species involved:
+  \begin{equation*}
+    \Delta A = -0.439, \qquad \Delta B = 8 \times 10^{-5}, \qquad
+    \Delta C = 0, \qquad \Delta D = -8.23 \times 10^4
+  \end{equation*}
+  Substituting to Eq~(\ref{eq:13.18}):
+  \begin{gather*}
+    \Delta G^\circ = -12671.71
+    \intertext{Solve for \(K\):}
+    K = e^{(-\Delta G/RT)} = 7.1795
+  \end{gather*}
+  Solve for the mole fractions with respect to \(\varepsilon\):
+  \begin{gather*}
+    y_{\ce{HCl}} = \frac{5 - 4\varepsilon}{6 - \varepsilon} \\
+    y_{\ce{O2}} = \frac{1 - \varepsilon}{6 - \varepsilon} \\
+    y_{\ce{H2O}} = \frac{2\varepsilon}{6 - \varepsilon} \\
+    y_{\ce{Cl2}} = \frac{2\varepsilon}{6 - \varepsilon}
+  \end{gather*}
+  Apply Eq.~(\ref{eq:13.28}:
+    \begin{equation}
+      \label{eq:13.28}
+      \tag{13.28}
+      \prod_i (y_i)^{v_i} = \left(\frac{P}{P^\circ}\right)^{-v} K
+    \end{equation}
+  \end{solution}

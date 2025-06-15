@@ -52,22 +52,22 @@ functions of the reaction coordinate for:
 \subsection*{Problem 13.2}
 A system initially containing 2~\unit{\mole} \(\ce{C2H4}\) and
 3~\unit{\mole} \(\ce{O2}\) undergoes the reactions:
+
 \begin{gather*}
   \ce{C2H4(g) + \frac{1}{2}O2(g) -> ((CH2)2)O(g)} \\
   \ce{C2H4(g) + 3O2(g) -> 2CO2(g) + 2H2O(g)}
 \end{gather*}
+
 Develop expressions for the mole fractions of the reacting species as
 functions of the reaction coordinates for the two reactions.
 
 \begin{solution}
-  The two chemical reactions need to be added and the same solution
-  in Problem~13.1 is to be used.
-  \begin{gather*}
-    \ce{2C2H4(g) + 3.5O2(g) -> 2CO2(g) + 2H2O(g) + ((CH2)2)O(g)}
-  \end{gather*}
+  Two extents, \(\varepsilon_1\) and \(\varepsilon_2\) are to be considered:
   \begin{empheq}[box=\widefbox]{gather*}
-    y_{\ce{C2H4}} = \frac{2 - 2\varepsilon}{5} \\
-    y_{\ce{O2}} = \frac{3 - 3.5\varepsilon}{5}
+    y_{\ce{C2H4}} = \frac{2 - \varepsilon_1 - \varepsilon_2}{5 - 1/2
+    \varepsilon_1} \\
+    y_{\ce{O2}} = \frac{3 - 1/2 \varepsilon_1 - 3 \varepsilon_2}{5 -
+    1/2 \varepsilon_1}
   \end{empheq}
 \end{solution}
 
@@ -75,22 +75,23 @@ functions of the reaction coordinates for the two reactions.
 A system formed initially of 2~\unit{\mole} \(\ce{CO2}\),
 5~\unit{\mole} \(\ce{H2}\), and 1~\unit{\mole} \(\ce{CO}\) undergoes
 the reactions:
+
 \begin{gather*}
   \ce{CO2(g) + 3H2(g) -> CH3OH(g) + H2O(g)} \\
   \ce{CO2(g) + H2(g) -> CO(g) + H2O(g)}
 \end{gather*}
+
 Develop expressions for the mole fractions of the reacting species as
 functions of the reaction coordinates for the two reactions.
 
 \begin{solution}
   Similar to the previous problem.
-  \begin{gather*}
-    \ce{2CO2(g) + 4H2(g) -> CH3OH(g) + 2H2O(g) + CO(g)}
-  \end{gather*}
   \begin{empheq}[box=\widefbox]{gather*}
-    y_{\ce{CO2}} = \frac{2 - 2\varepsilon}{8 - 2\varepsilon} \\
-    y_{\ce{H2}} = \frac{5 - 4\varepsilon}{8 - 2\varepsilon} \\
-    y_{\ce{CO}} = \frac{1 + \varepsilon}{8 - 2\varepsilon}
+    y_{\ce{CO2}} = \frac{2 - \varepsilon_1 - \varepsilon_2}{8 - 2
+    \varepsilon_1} \\
+    y_{\ce{H2}} = \frac{5 - 3 \varepsilon_1 - \varepsilon_2}{8 - 2
+    \varepsilon_1} \\
+    y_{\ce{CO}} = \frac{1 + \varepsilon_2}{8 - 2 \varepsilon_1}
   \end{empheq}
 \end{solution}
 
@@ -497,5 +498,34 @@ equilibrium? What would be the effect of reducing the pressure to
     y_{\ce{CH3CHO}} = 0.1968 \\
     y_{\ce{H2}} = 0.4645 \\
     y_{\ce{CH3CH2OH}} = 0.3387
+  \end{empheq}
+\end{solution}
+
+\subsection*{Problem 13.14}
+The following reaction reaches equilibrium at 650~\unit{\degreeCelsius} and
+atmospheric pressure:
+
+\begin{equation*}
+  \ce{C6H5CH=CH2(g) + H2(g) -> C6H5-C2H5(g)}
+\end{equation*}
+
+If the system initially contains 1.5~\unit{\mole} \(\ce{H2}\) for each mole
+of styrene, what is the position of the system at equilibrium? Assume ideal
+gases.
+
+\begin{solution}
+  Same solution as that of before:
+  \begin{gather*}
+    \Delta G^\circ = 2397.343~\unit{\joule\per\mole} \\
+    K = 1.366615 \\
+    y_{\ce{C6H5=CH2}} = \frac{1 - \varepsilon}{2.5 - \varepsilon} \\
+    y_{\ce{H2}} = \frac{1.5 - \varepsilon}{2.5 - \varepsilon} \\
+    y_{\ce{C6H5-C2H5}} = \frac{\varepsilon}{2.5 - \varepsilon} \\
+    \varepsilon = 0.41554
+  \end{gather*}
+  \begin{empheq}[box=\widefbox]{gather*}
+    y_{\ce{C6H5CH=CH2}} = 0.28039 \\
+    y_{\ce{H2}} = 0.52026 \\
+    y_{\ce{C6H5-C2H5}} = 0.19935
   \end{empheq}
 \end{solution}

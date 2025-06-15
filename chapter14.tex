@@ -1,0 +1,54 @@
+\section*{Chapter 14}
+
+\subsection*{Problem 14.3}
+
+A system formed of methane(1) and a light oil(2) at 200~\unit{\kelvin} and
+30~\unit{\bar} consists of a vapor phase containing 95~\unit{\mole-\%} methane
+and a liquid phase containing oil and dissolved methane. The fugacity of the
+methane is given by Henry's law, and at the temperature of interest Henry's
+constant is \(\mathcal{H}_1 = 200~\unit{\bar}\). Stating any assumptions,
+estimate the equilibrium mole fraction of methane in the liquid
+phase. The second virial coefficient of pure methane at 200~\unit{\kelvin} is
+-105~\unit{\centi\meter\cubed\per\mole}.
+
+\begin{solution}
+  Given:
+  \begin{gather*}
+    T = 200~\unit{\kelvin} \qquad P = 30~\unit{\bar} \\
+    y_1 = 0.95~\unit{\mole} \qquad \mathcal{H}_1 = 200~\unit{\bar} \\
+    B = - 105~\unit{\centi\meter\cubed\per\mole} \\
+  \end{gather*}
+  Equations:
+  \begin{gather*}
+    \hat{\phi}_i = \frac{\hat{f}_i}{y_iP} \\
+    \hat{\phi}_i = \exp{\frac{BP}{RT}} \\
+    \hat{f}_i = x_i\mathcal{H}
+  \end{gather*}
+  Answer:
+  \begin{equation*}
+    \boxed{x_1 = 0.1179}
+  \end{equation*}
+\end{solution}
+
+\subsection*{Problem 14.46}
+At 25~\unit{\degreeCelsius}, the solubility of \textit{n}-hexane in water is
+2~\unit{ppm} (molar basis), and the solubility of water in \textit{n}-hexane is
+520~\unit{ppm}. Estimate the activity coefficients for the two species in the
+two phases.
+
+\begin{solution}
+  Given:
+  \begin{gather*}
+    x_1^\alpha = 2~\unit{ppm} \\ x_2^\beta = 520~\unit{ppm}
+  \end{gather*}
+  Equations:
+  \begin{gather*}
+    \gamma_1^\alpha = \frac{x_1^\beta}{x_1^\alpha} \\
+    \gamma_2^\beta = \frac{x_2^\alpha}{x_2^\beta}
+  \end{gather*}
+  Answers:
+  \begin{empheq}[box=\widefbox]{gather*}
+    \gamma_1^\alpha = 499740 \\
+    \gamma_2^\beta = 1923.073
+  \end{empheq}
+\end{solution}
